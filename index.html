@@ -4,7 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Animal Hunt</title>
 <script>
-
+function showImage() {
+    var img = document.getElementById('myImageId');
+    img.style.visibility = 'visible';
+}
 </script>
 </head>
 
@@ -12,7 +15,7 @@
 <div width="600">
 <div style="background-image: url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); width:200px; height:175px; float:left;">
 <img src="img/x.png" style="width:200px; height:175px; opacity:0.4;
-filter:alpha(opacity=40);" />&nbsp;</div>
+filter:alpha(opacity=40); visibility:hidden;" id="myImageId" />&nbsp;</div>
 <div 
     style="background-image:
            url('http://api.pearson.com/dk/v1/images/2RQEbSKaYQvY6Z'); 
@@ -40,6 +43,6 @@ filter:alpha(opacity=40);" />&nbsp;</div>
     width:200px; 
     height:175px; float:left;">&nbsp;</div>
 </div>
-<div>Tiger</div>
+<div><a href="javascript:showImage()">Tiger</a></div>
 </body>
 </html>
