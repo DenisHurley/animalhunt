@@ -14,7 +14,18 @@
     style="background-image:
            url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); 
     width:200px; 
-    height:175px;">&nbsp;</div>
+    height:175px; float:left;">&nbsp;</div>
+<div 
+    style="background-image:
+           url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); 
+    width:200px; 
+    height:175px; float:left;">&nbsp;</div>
+<div 
+    style="background-image:
+           url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); 
+    width:200px; 
+    height:175px; float:left;">&nbsp;</div>
+
 <div 
     style="background-image:
            url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); 
@@ -24,7 +35,12 @@
     style="background-image:
            url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); 
     width:200px; 
-    height:175px;">&nbsp;</div>
+    height:175px; float:left;">&nbsp;</div>
+<div 
+    style="background-image:
+           url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); 
+    width:200px; 
+    height:175px; float:left;">&nbsp;</div>
 
 
 </body>
