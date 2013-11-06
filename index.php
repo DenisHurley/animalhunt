@@ -8,26 +8,10 @@ var errorCount = 0;
 var imageSelect = 'tiger';
 var divSelect = 'tigerdiv';
 
-function getJSONP(url, success) {
-
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0] 
-               || document.documentElement;
-
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
-    };
-
-    script.src = url;
-    head.appendChild(script);
-
+function hideImage(imageID) {
+	alert('sdfsdfs');
+    document.getElementById(imageID).style.visibility = 'hidden';
 }
-
-getJSONP('http://api.pearson.com/dk/v1/images?dataset=dkimages&caption=tiger', function(data){
-    console.log(data);
-});  
 
 function checkPick(pickSelect, nextPick){
 	if(pickSelect==imageSelect){
@@ -119,7 +103,7 @@ z-index:1;" id="tiger_check" />
     width:200px; 
     height:175px; float:left;">&nbsp;</div>
 </div>
-<div style="visibility: visible" id="tigerdiv"><a href="" onclick="getJSONP(); return false";>Tiger</a></div>
+<div style="visibility: visible" id="tigerdiv">Tiger</div>
 <div style="visibility: hidden" id="kangaroodiv">Kangaroo</div>
 <div style="visibility: hidden" id="monkeydiv">Monkey</div>
 <div style="visibility: hidden" id="otterdiv">Otter</div>
