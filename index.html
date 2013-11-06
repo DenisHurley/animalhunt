@@ -8,27 +8,6 @@ var errorCount = 0;
 var imageSelect = 'tiger';
 var divSelect = 'tigerdiv';
 
-function getJSONP(url, success) {
-
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0] 
-               || document.documentElement;
-
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
-    };
-
-    script.src = url;
-    head.appendChild(script);
-
-}
-
-getJSONP('http://api.pearson.com/dk/v1/images?dataset=dkimages&caption=tiger', function(data){
-    console.log(data);
-});  
-
 function checkPick(pickSelect, nextPick){
 	if(pickSelect==imageSelect){
 		alert('yes');
@@ -56,11 +35,18 @@ function checkPick(pickSelect, nextPick){
 	}
 }
 </script>
+<style type="text/css">
+.image2picks{
+margin: 10px;
+width:225px;
+height:225px;
+}
+</style>
 </head>
 
 <body>
 <div width="600">
-<div style="background-image: url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); width:200px; height:175px; float:left;" onclick="checkPick('kangaroo', 'monkey');">
+<div class="image2picks" style="background-image: url('http://api.pearson.com/dk/v1/images/byyT2TFqcc1sDH'); float:left;" onclick="checkPick('kangaroo', 'monkey');">
 <img src="img/x.png" style="width:200px; height:175px; opacity:0.4;
 filter:alpha(opacity=40); visibility:hidden;position:absolute;
 left:0px;
@@ -71,11 +57,9 @@ filter:alpha(opacity=40); visibility:hidden;position:absolute;
 left:0px;
 top:0px;
 z-index:1;" id="kangaroo_check" />&nbsp;</div>
-<div
+<div class="image2picks"
     style="background-image:
-           url('http://api.pearson.com/dk/v1/images/2RQEbSKaYQvY6Z'); 
-    width:200px; 
-    height:175px; float:left;" onclick="checkPick('bear', 'end');">
+           url('http://api.pearson.com/dk/v1/images/2RQEbSKaYQvY6Z'); float:left;" onclick="checkPick('bear', 'end');">
     <img src="img/x.png" style="width:200px; height:175px; opacity:0.4;
 filter:alpha(opacity=40); visibility:hidden;position:absolute;
 left:200px;
@@ -86,11 +70,9 @@ filter:alpha(opacity=40); visibility:hidden;position:absolute;
 left:200px;
 top:0px;
 z-index:1;" id="bear_check" />&nbsp;</div>
-<div onclick="checkPick('tiger', 'kangaroo');"
+<div class="image2picks" onclick="checkPick('tiger', 'kangaroo');"
     style="background-image:
-           url('http://api.pearson.com/dk/v1/images/H1DKH10y6PR8m8'); 
-    width:200px; 
-    height:175px; float:left;">
+           url('http://api.pearson.com/dk/v1/images/H1DKH10y6PR8m8'); float:left;">
 <img src="img/x.png" style="width:200px; height:175px; opacity:0.4;
 filter:alpha(opacity=40); visibility:hidden;position:absolute;
 left:400px;
@@ -103,21 +85,15 @@ top:0px;
 z-index:1;" id="tiger_check" />    
     &nbsp;</div>
 
-<div onclick="checkPick('koala', 'bear');"
+<div class="image2picks" onclick="checkPick('koala', 'bear');"
     style="background-image:
-           url('http://api.pearson.com/dk/v1/images/GwwvErjEBJ7M4X'); 
-    width:200px; 
-    height:175px; float:left;">&nbsp;</div>
-<div onclick="checkPick('otter', 'koala');" 
+           url('http://api.pearson.com/dk/v1/images/GwwvErjEBJ7M4X'); float:left;">&nbsp;</div>
+<div class="image2picks" onclick="checkPick('otter', 'koala');" 
     style="background-image:
-           url('http://api.pearson.com/dk/v1/images/23XapC38TwyCmR'); 
-    width:200px; 
-    height:175px; float:left;">&nbsp;</div>
-<div  onclick="checkPick('monkey', 'otter');"
+           url('http://api.pearson.com/dk/v1/images/23XapC38TwyCmR'); float:left;">&nbsp;</div>
+<div class="image2picks" onclick="checkPick('monkey', 'otter');"
     style="background-image:
-           url('http://api.pearson.com/dk/v1/images/HzeahsZVwf8pTj'); 
-    width:200px; 
-    height:175px; float:left;">&nbsp;</div>
+           url('http://api.pearson.com/dk/v1/images/HzeahsZVwf8pTj'); float:left;">&nbsp;</div>
 </div>
 <div style="visibility: visible" id="tigerdiv"><a href="" onclick="getJSONP(); return false";>Tiger</a></div>
 <div style="visibility: hidden" id="kangaroodiv">Kangaroo</div>
